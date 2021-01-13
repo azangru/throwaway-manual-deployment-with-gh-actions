@@ -1,4 +1,4 @@
-name: Deploy one
+name: Deploy two
 on: workflow_dispatch
 jobs:
   build-and-deploy:
@@ -12,7 +12,7 @@ jobs:
       - name: Predeploy
         run: |
           mkdir -p dist
-          cp one.html dist
+          cp two.html dist/index.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
